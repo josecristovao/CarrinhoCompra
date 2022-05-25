@@ -18,7 +18,7 @@ public class ProdutoPage {
 	}
 
 	public void esperarElementoAparecer() {
-		dsl.esperaElemento(By.linkText("Proceed to checkout"));
+		dsl.esperarElemento(By.linkText("Proceed to checkout"));
 	}
 
 	public void irParaCarrinho() {

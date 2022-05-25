@@ -30,16 +30,12 @@ public class DSL {
 		driver.findElement(By.xpath(xpath_campo)).submit();
 	}
 
-	public String obterTexto(By by) {
-		return driver.findElement(by).getText();
-	}
-
 	public void validarLista(By by) {
 		String texto_1 = driver.findElement(by).getText();
 		Assert.assertTrue(texto_1.contains("SHORT"));
 	}
 
-	public void esperaElemento(By by) {
+	public void esperarElemento(By by) {
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(by));
 	}
